@@ -1,5 +1,5 @@
 name: QA Bug Report
-description: File a bug report.
+description: File a bug report during QA.
 title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["ABPIA-GRENOBLE/Dev"]
@@ -17,43 +17,47 @@ body:
       description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com
     validations:
-      required: false
+      required: true
+  - type: textarea
+    id: what-was-expected
+    attributes:
+      label: What steps did I take and what was expected ?
+      description: Describe the steps made and what did you expect to happen?
+      placeholder: Enter your answer
+      value: "A bug happened!"
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
+      label: What happened ?
+      description: Describe what bug happen?
+      placeholder: Tell us what you see! Please copy and paste any relevant log output or screenshots to describe the issue.
       value: "A bug happened!"
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: browser
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Browser
+      description: What browser are you using ?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Google Chrome (default)
+        - Firefox
+        - Microsoft Edge
       default: 0
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: severity
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: Severity
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+        - Low - Functionnality not working as expected. Simple and effective workaround available. Improvement desirable for user experience.
+        - Major - Workaround available but not optimal. Requires immediate fix.
+        - Critical - Significant impact on productivity or user experience. Requires urgent fix
+    validations:
+      required: true
   - type: checkboxes
     id: terms
     attributes:

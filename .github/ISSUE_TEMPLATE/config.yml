@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Factoo Community Support
+    url: https://factoo.com/support
+    about: Please ask and answer questions here.
+  - name: Factoo Security Bug Bounty
+    url: https://factoo.com/security
+    about: Please report security vulnerabilities here.
+

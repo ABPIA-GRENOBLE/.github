@@ -1,7 +1,7 @@
 name: QA Bug Report
 description: File a bug report during QA.
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug", "triage", "qa"]
 projects: ["ABPIA-GRENOBLE/Dev"]
 assignees:
   - taiamiti
@@ -9,7 +9,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Guidelines for writing a ticket
+        - **ticket title** : make sure to mention the problem encountered, summarized in the most understandable way possible
+          Example : VAT and Total amounts are not calculated correctly
+        - **ticket body** : complete each section of the below form precisely. Make sure to provide link to url and screenshots where the problem occurs.
+  - type: input
+    id: url
+    attributes:
+      label: URL where the bug happened
+      description: Copy/paste the URL of the page from which the issue happened
+      placeholder: ex. https://app.factoo.fr/workspace/8/group/9/folder
+    validations:
+      required: true
+
   - type: input
     id: contact
     attributes:

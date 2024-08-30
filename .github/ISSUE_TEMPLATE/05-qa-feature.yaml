@@ -1,0 +1,51 @@
+name: QA Feature Request
+description: File a feature request during QA.
+title: "[FEATURE]: "
+labels: ["feature", "triage", "qa"]
+projects: ["ABPIA-GRENOBLE/Dev"]
+assignees:
+  - taiamiti
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Guidelines for writing a ticket
+        - **ticket title** : make sure to mention the new functionality summarized in the most understandable way possible
+          Bad example : I want to see different colors for detected accounting fields based on their type for clarity.
+          Good example : Display different colors for detected accounting fields.
+        - **ticket body** : complete each section of the below form precisely. Make sure to provide link to url, screenshots, drawings to better illustrate what you want
+          if possible.  
+  - type: textarea
+    id: what-are-limitations
+    attributes:
+      label: What steps of the workflow can be improved ?
+      description: Describe the steps made and why is it not ideal?
+      placeholder: A clear and concise description of what you did and why it is not user friendly.
+    validations:
+      required: true
+  - type: textarea
+    id: what-to-do
+    attributes:
+      label: Describe the solution
+      description: Describe what new feature you want?
+      placeholder: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe the alternatives
+      description: Describe what alternatives was considered?
+      placeholder: A clear and concise description of what was considered.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low - Low ergonomie improvement.
+        - Medium - Nice to have that impact many users.
+        - High - Significant impact on productivity or user experience.
+    validations:
+      required: true
